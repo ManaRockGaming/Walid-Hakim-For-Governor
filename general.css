@@ -1,0 +1,346 @@
+
+/* ENTIRE BODY */
+	body {margin: 0; padding: 0; background-color: #F0F5F8; overflow-x: hidden; /* Prevent horizontal scrollbar */}
+	body h1 {font-size: 2.15vw; }
+	body h2 {font-size: 2vw; }
+	body h3 {font-size: 1.75vw; }
+	body p {font-size: 1.2vw; }
+	@media screen and (max-width: 768px) {body {margin: 0% -10%; padding: 0% -10%;}}
+
+	@font-face { font-family: Jerome; src: url('Jerome.otf'); } 
+    a {font-family: Jerome; font-weight: bold;}
+
+	@font-face { font-family: FuturaDisplay; src: url('FuturaDisplay.otf'); } 
+    a {font-family: FuturaDisplay; font-weight: bold;}
+
+	.p300vw {font-family: FuturaDisplay; margin: 0px; font-size: 3vw; font-weight: bold;}
+	.p250vw {font-family: FuturaDisplay; margin: 0px; font-size: 2.5vw; font-weight: bold;}
+	.p200vw {font-family: FuturaDisplay; margin: 0px; font-size: 2vw; font-weight: bold;}
+	.p175vw {font-family: FuturaDisplay; margin: 0px; font-size: 1.75vw; font-weight: bold;}
+	.p150vw {font-family: FuturaDisplay; margin: 0px; font-size: 1.5vw; font-weight: bold;}
+	.p125vw {font-family: FuturaDisplay; margin: 0px; font-size: 1.25vw; font-weight: bold;}
+	.p100vw {font-family: FuturaDisplay; margin: 0px; font-size: 1.00vw; font-weight: bold;}
+	.p100vw {font-family: FuturaDisplay; margin: 0px; font-size: 0.75vw; font-weight: bold;}
+
+/*#region WEBSITE TITLE*/
+	.websiteTitle {
+  background-color: #19421A;
+  color: white;
+  font-family: FuturaDisplay;
+  display: flex;
+  justify-content: space-between; /* left + right alignment */
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  overflow: hidden;
+}
+
+.websiteTitleLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.websiteTitleLeft img {
+  width: 80px;
+  max-width: 10vw;
+  min-width: 50px;
+  transition: width 0.3s ease;
+}
+
+
+
+.websiteTitleRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8vw;
+  padding-right: 2vw;
+  position: relative;
+  top: 0px; /* 🔹 move down (use negative to move up) */
+}
+
+.websiteTitleRight a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.websiteTitleRight img {
+  width: 6vw;
+  max-width: 66px;
+  height: auto;
+}
+
+.websiteTitleRight img:hover {
+  transform: scale(1.1);
+}
+
+.websiteTitleRight h1 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.websiteTitleRight h3 {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+/* MEDIA QUERIES FOR WEBSITE TITLE */
+@media (max-width: 768px) {
+  .websiteTitle {
+    padding: 15px;
+    gap: 10px;
+    flex-direction: column; /* stack vertically on smaller screens */
+    text-align: center;
+  }
+  .websiteTitleRight {
+    text-align: center;
+  }
+  .websiteTitleLeft img {
+    width: 25%;
+  }
+  .websiteTitleRight h1 {
+    font-size: 1.5rem;
+  }
+  .websiteTitleRight h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .websiteTitle {
+    padding: 10px;
+    gap: 8px;
+  }
+  .websiteTitleLeft img {
+    width: 35%;
+  }
+  .websiteTitleRight h1 {
+    font-size: 1.3rem;
+  }
+  .websiteTitleRight h3 {
+    font-size: 0.9rem;
+  }
+}
+/*#endregion WEBSITE TITLE*/
+
+/*#region NAVIGATION*/
+	.topNavigation {
+  display: flex;
+  justify-content: space-between; /* left + right alignment */
+  align-items: center;
+  background-color: #508C1B;
+  padding: 0.75vw 2vw;
+}
+
+.topNavigationLeft {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.topNavigationDiv {
+  text-align: right;
+}
+
+.topNavigation a {
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 4px 10px;
+  font-size: 1.2rem;
+}
+
+.topNavigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  height: 2px;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.topNavigation a:hover::after {
+  transform: scaleX(1);
+}
+
+.topNavigation a.Active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  height: 2px;
+  background: white;
+  transform: scaleX(1);
+}
+
+		/*
+		.topNavigation a {text-align: left; color: white; text-decoration: none; padding: 14px 1vw; font-size: 1.2rem; }
+		.topNavigation a:hover {text-decoration: underline;}
+		.topNavigation a.Active {text-decoration: underline;}
+		*/
+	
+		.dropDown {display: inline-block; font-size: 1.2rem;}
+		.dropDown:hover .dropDownContent {display: block;}
+		.dropDown:hover .topLink {text-decoration: underline;}
+		.dropDown p {font-family: FuturaDisplay; color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left; font-size: 1.2rem; margin: 0px; background-color: #ddd;}
+		.dropDownContent {display: none; position: absolute; background-color: #f1f1f1; margin-top: 0.2%; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 2;}
+		.dropDownContent a {color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left; font-size: 1.2rem; }
+		.dropDownContent a:hover {background-color: #ddd;}
+		
+		/* MEDIA QUERIES FOR NAVIGATION */
+		@media screen and (max-width: 768px) {
+			.mobile-Br { display: none; }
+			.topNavigation a { padding: 0.75em 1vw; font-size: clamp(12px, 2.5vw, 16px); }
+			.dropDownContent { min-width: 100%; } }
+/*#endregion NAVIGATION*/
+
+
+/*#region HOME PAGE*/
+
+	/*#region ABOUT SECTION*/
+		.aboutSection {background-color: #194867; color: white;}
+			.aboutSectionDiv {vertical-align: top; margin: 0% 10%; padding: 2% 0%; }
+			.aboutSectionLeft { padding: 0px 20px; vertical-align: top;}
+			.aboutSectionLeftTitle {font-family: Jerome; font-size: 5vw; text-align: center; margin: 0; padding: 0; line-height: 1;}
+			.aboutSectionRight {padding: 0px 20px; width: 40%; vertical-align: top;}
+			.aboutSectionRightTitle {font-family: Jerome; font-size: 5vw; text-align: center; margin: 0; padding: 0; line-height: 1;}
+	/*#endregion ABOUT SECTION*/
+
+/*#endregion HOME PAGE*/
+
+
+/*#region PORTRAITS*/
+	.portraits {background-color: #5B819A; padding: 1% 0% 0% 0%; width: 100%; display:flex; justify-content: center;}
+		.portraits table {margin: 0; text-align: center; width: 80%; table-layout: fixed;}
+		.portraits td { width: 33.3%; padding: 1%;}
+		.portraits a {text-decoration: none; color: black;}
+
+		.portraits img {width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+		.portraits img:hover {transform:scale(1.1); }
+		.portraits100 {width: 11vw; height: 11vw; border-radius: 50%; overflow: hidden; display: inline-block;   }
+		.portraits100W {width: 10vw; height: 10vw; border-radius: 50%; overflow: hidden; display: inline-block; border: 0.4vw solid white;  }		
+		.portraits75 {width: 7.5vw; height: 7.5vw; border-radius: 50%; overflow: hidden; display: inline-block; border: 0.3vw solid black;  }
+		.portraits75W {width: 7.5vw; height: 7.5vw; border-radius: 50%; overflow: hidden; display: inline-block; border: 0.3vw solid white;  }	
+		.portraits125 {width: 12.5vw; height: 12.5vw; border-radius: 50%; overflow: hidden; display: inline-block; border: 0.4vw solid black;  }
+/*#endregion PORTRAITS*/
+
+
+/*#region INPUT FORM SECTION*/
+	.inputForm {margin: 0% 10%; border: none; padding: 10px; font-family: FuturaDisplay; text-align: center;}
+		.inputForm table {width: 50%;}
+		.inputForm td {border: none; padding: 1% 2%; font-size:1.5vw; text-align: left;}
+		.inputForm .inputFormTitle350 {color: white; text-align: center; font-size: 3.5vw;}
+		.inputForm .inputFormTitle300 {color: white; text-align: center; font-size: 3vw;}
+		.inputForm .inputFormInput {width:100%; height:10%; font-size:1.5vw; border-radius: 10px;}
+
+		.inputFormButton {background-color: white; color: black; font-size: 1vw; font-family: FuturaDisplay; border: 0.3vw solid black; padding: 0.8vw 1.3vw; border-radius: 0px; cursor: pointer; display: none;}
+		.inputFormButton:hover { background-color: #19421A; color: white;}
+
+		.inputFormThanks {margin: 0% 10% 0% 10%; border: none; padding: 0px; font-family: FuturaDisplay; text-align: center; font-size: 2.5vw; font-style: italic;}
+		.inputFormThanks div {width: 100%;}
+/*#endregion INPUT FORM SECTION*/
+
+/*#region FOOTER*/
+	.bottomFooter {background-color: #19421A; color: white;}
+	.bottomFooter table { margin: 0% 10%;}
+	.bottomFooter td {width: 100%; vertical-align: center; padding: 0px 20px 0px 20px;}
+
+
+	.bottomFooter a {position: relative; font-family: Times New Roman; color: white; text-decoration: none;}
+	.bottomFooter a::after {content: "";
+    		position: absolute;
+    		left: 0;
+    		right: 0;
+    		bottom: 0px;
+    		height: 1.5px;
+    		background: white;
+    		transform: scaleX(0);
+    		transform-origin: center;
+    		transition: transform 0.3s ease;}
+	.bottomFooter a:hover::after {transform: scaleX(1);}
+
+	
+
+	.bottomFooter img:hover {
+  		transform: scale(1.1);
+		}
+/*#endregion FOOTER*/
+
+
+.animatedLink a {position: relative; font-family: Times New Roman; color: white; text-decoration: none;}
+	.animatedLink a::after {content: "";
+    		position: absolute;
+    		left: 0;
+    		right: 0;
+    		bottom: 0px;
+    		height: 1.5px;
+    		background: white;
+    		transform: scaleX(0);
+    		transform-origin: center;
+    		transition: transform 0.3s ease;}
+	.animatedLink a:hover::after {transform: scaleX(1);}
+
+
+	.animatedLinkBlack a {position: relative; font-family: Times New Roman; color: black; text-decoration: none;}
+	.animatedLinkBlack a::after {content: "";
+    		position: absolute;
+    		left: 0;
+    		right: 0;
+    		bottom: 0px;
+    		height: 1.5px;
+    		background: black;
+    		transform: scaleX(0);
+    		transform-origin: center;
+    		transition: transform 0.3s ease;}
+	.animatedLinkBlack a:hover::after {transform: scaleX(1);}
+
+
+
+
+	.insta-preview {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #2E8B57; /* Subtle green border to match theme */
+            border-radius: 12px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        .insta-preview:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            border-color: #3FA34D; /* Slightly brighter green on hover */
+        }
+        .insta-preview img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .insta-preview p {
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            color: #333;
+            margin: 0;
+        }
+        @media (max-width: 600px) {
+            .insta-preview { width: 90%; }
+        }
+
+
+
+	

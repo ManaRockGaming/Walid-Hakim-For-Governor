@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Walid Hakim For Governorer</title>
+<link rel="icon" type="image/x-icon" href="Permanent Photos/Search Icon.png">
+<link rel="stylesheet" type="text/css" href="general.css" />
+<style>
+    .MilitaryColors {color: #4d784e; color: #6ea171; color: #e1d798; color: #675645; color:#424756;}
+    .GreenColors {color: #19421A; color: #508C1B;}
+
+
+    .countdown {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 24px;
+  margin-top: 20px;
+  color: black;
+}
+
+.countdown span {
+  border: 2px solid #4d784e; /* Change color as you like */
+  border-radius: 10px;
+  padding: 10px 15px;
+  min-width: 60px;
+  text-align: center;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.countdown label {
+  display: block;
+  font-size: 12px;
+  color: #555;
+  margin-top: 5px;
+}
+</style>
+</head>
+<body>
+
+<!-- WEBSITE TITLE -->
+<header>
+    <div class="websiteTitle">
+  <!-- Left Side -->
+  <div class="websiteTitleLeft">
+    <span style="margin-left: 10px; font-family: Jerome; font-size: 5vw;">WALID HAKIM FOR GOVERNOR OF SOUTH CAROLINA</span>
+  </div>
+
+  <!-- Right Side -->
+  <div class="websiteTitleRight">
+  <a href=""><img src="Social_Icons/icons8-instagram-100.png" alt="Instagram"></a>
+  <a href=""><img src="Social_Icons/icons8-facebook-circled-100.png" alt="Facebook"></a>
+  <a href=""><img src="Social_Icons/icons8-play-button-circled-96.png" alt="YouTube"></a>
+  <h1><div class="animatedLink"><a href="">English</a> / <a href="">Español</a></div></h1>
+</div>
+</div>
+    
+    
+</header>
+
+<!-- TOP NAVIGATION -->
+<navigation>
+  <div class="topNavigation">
+    <!-- Left side --> 
+    <div class="topNavigationLeft">
+      <!-- 
+      <img src="logo.png" alt="Logo" style="height: 2.5rem; vertical-align: middle;">
+      <span style="margin-left: 10px;">Walid Hakim for Governor of South Carolina</span>
+      -->
+    </div>
+    
+
+    <!-- Right side -->
+    <div class="topNavigationDiv">
+      <div class="dropDown"><a class="Active" href="https://www.bulldogdemocrats.org/">HOME</a></div>
+      <div class="dropDown"><a href="Join.html">PLATFORM</a></div>
+      <div class="dropDown"><a href="Support.html">BIOGRAPHY</a></div>
+      <div class="dropDown">
+        <a href="Members.html">COMMUNITY⬇</a>
+        <div class="dropDownContent">
+          <a href="Members.html">EVENTS</a>
+          <a href="Members.html">VOLUNTEER</a>
+          <a href="Bylaws.html">ENDORSEMENTS</a>
+        </div>
+      </div>
+      <div class="dropDown"><a href="https://secure.actblue.com/signin" target="_blank">DONATE</a></div>
+    </div>
+  </div>
+</navigation>
+
+<!-- MAIN CONTENT -->
+<article>
+    
+    <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('Picture_Of_Hakim_In_Suit.jpg'); background-size: cover; background-repeat: no-repeat;">
+    <!-- NEWSLETTER SECTION-->  
+    <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSfGQgvinFyXIYLkjB-rfBgZu7ZpKwsfwFUR1gHTkHh672mFuA/formResponse" method="POST"  target="hidden_iframe" onsubmit="submitted=true;">        
+        <div class="inputForm"> 
+            <table id="formContent">
+                <!-- Questions will be inserted here dynamically -->
+            </table>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { nextForm(); }"></iframe>
+            <div id="navButtons" style="width: 50%;">
+                </br>
+                <button type="button" class="inputFormButton" id="backBtn" onclick="prevForm()" style="display:none;">&lt;Join The Movement</button>
+                <button type="button" class="inputFormButton" id="nextBtn" onclick="nextForm()">Join The Movement</button>
+                <input type="submit" class="inputFormButton" id="submitBtn" value="Join The Movement" style="display:none; border-radius: 10px;">
+            </div>
+            </br>
+            <!-- <span style="font-style: italic;"><a href="">Bulldog Democrat Privacy & Cybersecruity Policy</a></span> -->
+        </div>
+    </form>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        var submitted = false;
+        var currentSet = 0;
+        var loadedSets = [];
+
+        var questionSets = [
+            // First Set
+            `
+            <tr>
+                <td colspan="2" class="inputFormTitle300" style="font-family: Jerome; font-size: 5vw;">
+                    <b>Walid Hakim for Governor of South Carolina</b>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%; color: white;">
+                    First Name:<br>
+                    <input type="text" name="entry.1637702438" maxlength="30" class="inputFormInput" placeholder="">
+                </td>
+                <td style="width: 50%; color: white;">
+                    Last Name:<br>
+                    <input type="text" name="entry.463950814" maxlength="30" class="inputFormInput" placeholder="">
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 100%; color: white;" colspan="2">
+                    Email:<br>
+                    <input type="text" name="entry.463950814" maxlength="30" class="inputFormInput" placeholder="">
+                </td>
+            </tr>
+            `,
+        ];
+
+        function updateForm() {
+            // Inject the set if not already added
+            if (!loadedSets.includes(currentSet)) {
+                const wrappedHtml = `<tbody class="formStep" id="formStep${currentSet}">${questionSets[currentSet]}</tbody>`;
+                $("#formContent").append(wrappedHtml);
+                loadedSets.push(currentSet);
+            }
+
+            // Hide all sets
+            $(".formStep").hide();
+
+            // Show current set
+            $(`#formStep${currentSet}`).show();
+
+            // Toggle nav buttons
+            $("#backBtn").toggle(currentSet > 0);
+            $("#nextBtn").toggle(currentSet < questionSets.length - 1);
+            $("#submitBtn").toggle(currentSet === questionSets.length - 1);
+        }
+
+        function nextForm() {
+            if (currentSet < questionSets.length - 1) {
+                currentSet++;
+                updateForm();
+            }
+        }
+
+        function prevForm() {
+            if (currentSet > 0) {
+                currentSet--;
+                updateForm();
+            }
+        }
+
+        $(document).ready(function () {
+            updateForm(); // Show first step
+        });
+    </script>
+    </div>
+
+    <!-- ABOUT SECTION-->  
+    <div class="aboutSection" style="background-color: #508C1B;">
+        <div class="aboutSectionDiv">
+            <table>
+                <tr>
+                    <td class="aboutSectionLeft">
+                        <h1 class="aboutSectionLeftTitle">Meet Walid Hakim</h1>
+                    </td>
+                    <td class="aboutSectionRight" style="width: 50%;" rowspan="2">
+                        <img src="Picture_Of_Hakim_At_Protest.jpg" style="width: 100%; border-radius: 15px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="aboutSectionLeft" style="width: 50%;">
+                        <h1>Reliable Leadership for South Carolina</h1>
+                        <p>Born to an American mother, and a Greek/Palestinian father. In 1985, his family moved to his mothers home state of South Carolina, where he attended Lexington High School and Newberry College. After Iraq invaded Kuwait in 1990, he dropped out of college and enlisted in the US Marine Corps. After the Marine Corps, Walid worked in a variety of different jobs; car sales, restaurant owner, police officer, political consultant, actor, to name a few. Now he is running to represent you!</p> 
+                        <p><div class="animatedLink"><a href="">Learn More About Hakim...</a></div></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- PLATFORM SECTION-->  
+    <div class="aboutSection" style="background-color: #19421A;">
+        <div class="aboutSectionDiv">
+            <table>
+                <tr>
+                    <td class="aboutSectionRight" style="width: 50%;" rowspan="2">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Qg0o6WWVN48?si=6hKHiYfBGKyl9UIz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="aboutSectionLeft" style="width: 50%;">
+                        <h1 style="font-family: Jerome; font-size: 4vw; margin-top: 0em; margin-bottom: 0em;">Another Step Toward A New Carolina</h1>
+                        <p>We are all South Carolinians. 
+Mr. Walid Hakim is an walking embodiment of how we can all choose to walk a different path, a journey of unity and cooperation.
+Have you ever heard someone say this:
+“Somebody ought to do something about this!”
+The Green Party has heard that call! We have the plans. We have the vision. All that is missing now is your support!
+With planning, we have hope. With hope, we have a chance. We the Green Party, will accomplish our goal of saving the future for generations.
+Vote Green!</p> 
+                        <p><div class="animatedLink"><a href="">View Hakim's Full Platform...</a></div></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div> 
+
+   
+
+        <!-- PORTRAITS -->
+    <div class="portraits" style="background-color: #508C1B;">
+        </br>
+        <table>
+            <tr>
+                <td colspan="4">
+                    <h1 class="aboutSectionLeftTitle" style="color: white;">Endorsements</h1>
+                    <div class="animatedLink"><a href="">View All Endorsements...</a></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.instagram.com/charlestongreenparty/" target="_blank">
+                        <div class="portraits100">
+                            <img src="Endorsements/Endorsement_From_Charleston_Green_Party.jpg" alt="Endorsement From Charleston Green Party">
+                        </div>
+                        <div style="position: relative; top: -30px; border-radius: 10px; background-color: #19421A; color: white;">
+                            <p class="p150vw">Charleston Green Party</p>  
+                            <p class="p125vw">County Political Organization</p>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://www.instagram.com/green_party_at_uofsc/" target="_blank">
+                        <div class="portraits100">
+                            <img src="Endorsements/Endorsement_From_Greens_of_UofSC.jpg" alt="Endorsement From Greens of UofSC">
+                        </div>
+                        <div style="position: relative; top: -30px; border-radius: 10px; background-color: #19421A; color: white;">
+                            <p class="p150vw">UofSC Green Party</p>  
+                            <p class="p125vw">Student Political Organization</p>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://www.instagram.com/freepalestinechs/" target="_blank">
+                        <div class="portraits100">
+                            <img src="Endorsements/Endorsement_From_Free_Palestine_Charleston.jpg" alt="Endoresement From Free Palestine Charleston">
+                        </div>
+                        <div style="position: relative; top: -30px; border-radius: 10px; background-color: #19421A; color: white;">
+                            <p class="p150vw">SC Free Palestine</p>  
+                            <p class="p125vw">Political Movement</p>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://www.instagram.com/columbiacraftsforpalestine/" target="_blank">
+                        <div class="portraits100">
+                            <img src="Endorsements/Endorsement_From_Columbia_Crafts_For_Palestine.jpg" alt="Endorsement From Columbia Crafts For Palestine">
+                        </div>
+                        <div style="position: relative; top: -30px; border-radius: 10px; background-color: #19421A; color: white;">
+                            <p class="p150vw">Crafts For Palestine</p>  
+                            <p class="p125vw">Social Group</p>
+                        </div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <!-- TIMELINE -->  
+    <div class="aboutSection" style="background-image: linear-gradient(rgba(25, 66, 26, 0.9), rgba(25, 66, 26, 0.9)), url('TableBackground.png'); background-size: cover;">
+        <div class="aboutSectionDiv">
+            <table>
+                <tr>
+                    <td class="aboutSectionLeft" style="width: 60%; text-align: center;" rowspan="3">
+                        <h1 class="aboutSectionLeftTitle">UPCOMING EVENTS</h1>
+                        <div>
+                            <p></p>
+                            <div style="border: 2px solid white; border-radius: 10px; padding: 1%; width: 80%; margin: 0 auto; text-align: center;">
+                                <h1 style="font-family: Jerome; font-size: 3vw; margin: 0.2em 0;">SC Green Party Primary</h1>
+                                <p id="demo" class="countdown"></p>
+                                <p>June 9th, 2026</p>
+                            </div>
+                            <p></p>
+                            <div style="border: 2px solid black; background-color: white; color: black; border-radius: 10px; padding: 1%; width: 80%; margin: 0 auto; text-align: center;">
+                                <h1 style="font-family: Jerome; font-size: 3vw; margin: 0.2em 0;">Candidate Meet & Greet</h1>
+                                <img src="Picture_Of_Hakim_Portraits.jpg" style="width: 80%; border: 2px solid black; border-radius: 10px;">
+                                <h1>Local Coffee Shop</h1>
+                                <p>1100 Gervais St, Columbia, SC 29208</p>
+                                <p>June 9th, 2026 // 10:00am - 11:00am</p>
+                                <p class="animatedLinkBlack"><a href="">RSVP...</a></p>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="width: 40%; vertical-align: top;">
+                        <div style="background-color: #19421A; padding: 2% 15%; border-radius: 10px;">
+                            <h1 class="aboutSectionRightTitle">The Green Party</h1>
+                            <p style="text-align: center;"><b><u>WHY SUPPORT A 3RD PARTY</b></u></p>
+                            <p>In a state long dominated by one party, supporting the Green Party offers a real chance to expand the conversation. 
+                                Third-party movements bring fresh ideas, hold major parties accountable, and give voters a genuine alternative focused on grassroot democracy, social justice, and environmental sustainability. 
+                                Politics should serve people, not corporations or party machines. 
+                                Even one vote for the Green Party sends a powerful message: South Carolina deserves more than the status quo.</p>
+                        </div>
+
+                        <p></p>
+
+                        <div style="background-color: #19421A; border-radius: 10px; padding: 0px 0px 20px 0px;">
+    <h1 class="aboutSectionRightTitle">Social Media</h1>
+
+    <!-- Centering wrapper -->
+    <div style="display: flex; justify-content: center; position: relative; max-width:400px; margin:auto;">
+    <div class="insta-embed" data-url="https://www.instagram.com/walid_n._hakim/" style="position: relative;">
+        <!-- This overlay button -->
+        <a href="https://www.instagram.com/walid_n._hakim/" target="_blank" rel="noopener noreferrer"
+           style="
+               position: absolute;
+               bottom: 20px;
+               left: 50%;
+               transform: translateX(-50%);
+               background: black;
+               color: white;
+               padding: 8px 15px;
+               border-radius: 5px;
+               font-weight: bold;
+               text-decoration: none;
+               z-index: 10;
+           ">
+            View on Instagram
+        </a>
+    </div>
+</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    
+
+</article>
+
+
+
+
+
+<!-- FOOTER -->
+
+<footer>
+    <div class="bottomFooter" style="background-color: #19421A;">
+        <table>
+            <tr>
+                <td colspan="3">
+                    <h3 style="font-family: Jerome; font-size: 3vw; margin-top: 0.5em; margin-bottom: 0em;">
+                        Walid Hakim for Governorer
+                    </h3>
+                </td>
+            </tr>
+            <tr style="vertical-align: top;">
+                <td style="width: 50%;">
+                    <p>
+                        <b><u>DONATE ONLINE:</u>
+                        </br><div class="animatedLink"><a href="https://secure.actblue.com/signin" target="_blank">https://secure.actblue.com/signin</a></div></b>
+                    </p>
+                    <p>
+                        <b><u>DONATE BY MAIL:</u>
+                        </br>
+                        </br><i>Walid Hakim For Governor</i>
+                        </br>1670 Springdale Dr Unit 11-A PMB#260, Camden, SC 29020</b>
+                    </p>
+                </td>
+                <td style="width: 20%;">
+                    <p>
+                        <b><u>EMAIL:</u></b>
+                        </br>WalidNHakim@gmail.com
+                        </br>
+                        </br>
+
+                        <b><u>CAMPAIGN:</u></b>
+                        </br>
+                        <a href="https://www.bulldogdemocrats.org/">Home</a>
+                        </br>
+                        <a href="Join.html">Platform</a>
+                        </br>
+                        <a href="Members.html">Biography</a>
+                        </br>
+                        <a href="" target="_blank">Community</a>
+                        </br>
+                        <a href="Privacy Policy.pdf" target="_blank">Privacy Policy</a>
+                    </p>
+                </td>
+                <td style="width: 30%; text-align: center;">
+                    <a href="" class="footerImageLink"><img src="Social_Icons/icons8-instagram-100.png"></a>
+                    <a href="" class="footerImageLink"><img src="Social_Icons/icons8-facebook-circled-100.png"></a>
+                    <a href="" class="footerImageLink"><img src="Social_Icons/icons8-play-button-circled-96.png"></a>
+                    <p></p>
+                    <h1><div class="animatedLink"><a href="">English</a> / <a href="">Español</a></div></h1>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 100%; vertical-align: center; text-align: center;" colspan="3">
+                    <p>
+                        <i>©2025 PAID FOR BY WALID HAKIM FOR GOVERNOR. ALL RIGHTS RESERVED.
+                        </br>WEBSITE CODED BY <a href="">CONOR X ROM.</a></i>
+                    </p>
+          
+        
+                </td>
+            </tr>
+        </table>
+        </br>   
+    </div>
+</footer>
+
+
+
+</body>
+
+
+<script src="jquery-3.7.1.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+    $('#gform').on('submit', function(e) {
+    $('#gform *').fadeOut(1000);
+    $('#gform').prepend(
+     '<span class="inputFormThanks" style="margin: 0% 10% 0% 0%;"><div>Thank You! A Representative Will Be In Contact With You Shortly.</div></span>'
+    );});
+</script>
+
+
+
+<script>
+var countDownDate = new Date("Jun 9, 2026 08:00:00").getTime();
+
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("demo").innerHTML = `
+    <span>${days}<label>Days</label></span>
+    <span>${hours}<label>Hours</label></span>
+    <span>${minutes}<label>Minutes</label></span>
+    <span>${seconds}<label>Seconds</label></span>
+  `;
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const embed = document.querySelector('.insta-embed');
+    const loadEmbed = () => {
+        if (embed.dataset.loaded) return;
+        embed.dataset.loaded = true;
+        embed.innerHTML += `
+            <blockquote class="instagram-media"
+                data-instgrm-permalink="${embed.dataset.url}?utm_source=ig_embed"
+                data-instgrm-version="14"
+                style="background: #FFF; border:0;border-radius:10px;box-shadow:0 0 5px rgba(0,0,0,0.2); max-width:100%; margin:auto;">
+            </blockquote>`;
+        const s = document.createElement('script');
+        s.src = "https://www.instagram.com/embed.js";
+        s.async = true;
+        document.body.appendChild(s);
+    };
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                loadEmbed();
+                observer.disconnect();
+            }
+        });
+    });
+    observer.observe(embed);
+});
+</script>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The United Independence Coalition</title>
+<link rel="stylesheet" href="./Parliament_Style.css">
+<style>
+
+    .MilitaryColors {color: #4d784e; color: #6ea171; color: #e1d798; color: #675645; color:#424756;}
+    .GreenColors {color: #19421A; color: #508C1B;}
+
+    body {margin: 0; padding: 0; background-color: #F0F5F8; overflow-x: hidden;  /* Prevent horizontal scrollbar */}
+    .websiteTitle { background-color: #194867; color: white; font-family: FuturaDisplay; display: flex; align-items: center; justify-content: center; gap: 20px; padding: 20px; text-align: left; flex-wrap: wrap; overflow: hidden;}
+    .websiteTitle img { width: 10%; min-width: 50px; max-width: 80px; transition: width 0.3s ease; } 
+	.websiteTitle h1 {text-align: left; margin: 0; font-size: 2rem;}
+	.websiteTitle h3 {text-align: left; margin-top: 5px; margin-bottom: 0; font-size: 1.2rem;}
+	
+    .topNavigation {overflow: hidden; background-color: #508C1B; padding: 0.75vw 0.5vw; text-align: right;}
+	.topNavigation a {text-align: left; color: white; text-decoration: none; padding: 14px 1vw; font-size: 1.2rem; }
+	.topNavigation a:hover {text-decoration: underline;}
+	.topNavigation a.Active {text-decoration: underline;}
+
+    .inputForm {margin: 0% 10%; border: none; padding: 10px; font-family: FuturaDisplay; text-align: center;}
+		.inputForm table {width: 100%;}
+		.inputForm td {border: none; padding: 1% 2%; font-size:1.5vw; text-align: left;}
+		.inputForm .inputFormTitle350 {color: black; text-align: center; font-size: 3.5vw;}
+		.inputForm .inputFormTitle300 {color: black; text-align: center; font-size: 3vw;}
+		.inputForm .inputFormInput {width:100%; height:10%; font-size:1.5vw;}
+
+		.inputFormButton {background-color: white; color: black; font-size: 1vw; font-family: FuturaDisplay; border: 0.3vw solid black; padding: 0.8vw 1.3vw; border-radius: 0px; cursor: pointer; display: none;}
+		.inputFormButton:hover { background-color: #194867; color: white;}
+
+		.inputFormThanks {margin: 0% 10% 0% 10%; border: none; padding: 0px; font-family: FuturaDisplay; text-align: center; font-size: 2.5vw; font-style: italic;}
+		.inputFormThanks div {width: 100%;}
+
+</style>
+<body>
+
+    <!-- WEBSITE TITLE -->
+    <header>
+        <div class="websiteTitle" style="background-color: #19421A;">
+            <img src="Permanent Photos/CDS Patch.png" alt="Bulldog Democrats Logo">
+            <div>
+            <h1>The College Democrats At The Citadel</h1>
+            <h3>Sponsored By The Bulldog Democrats</h3>
+            </div>
+        </div>
+    </header>
+
+    <navigation>
+    <div class="topNavigation">
+        <a class="Active" href="https://www.bulldogdemocrats.org/">HOME</a>
+        <a href="Join.html">ISSUES</a>
+        <a href="Join.html">BIOGRAPHY</a>
+        <a href="Join.html">NEWS</a>
+        <a href="Join.html">RESOURCES</a>
+        <a href="Join.html">DONATE</a>
+    </div>
+    </navigation>
+
+    <table>
+        <tr>
+            <td>
+
+                <!-- JOIN SECTION-->  
+                <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSfGQgvinFyXIYLkjB-rfBgZu7ZpKwsfwFUR1gHTkHh672mFuA/formResponse" method="POST"  target="hidden_iframe" onsubmit="submitted=true;">        
+                    <div class="inputForm"> 
+                        <table id="formContent">
+                        <!-- Questions will be inserted here dynamically -->
+                        </table>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { nextForm(); }"></iframe>
+                    <div id="navButtons">
+                    <button type="button" class="inputFormButton" id="backBtn" onclick="prevForm()" style="display:none;">&lt;Back</button>
+                    <button type="button" class="inputFormButton" id="nextBtn" onclick="nextForm()">Next&gt</button>
+                    <input type="submit" class="inputFormButton" id="submitBtn" value="Submit" style="display:none;">
+                </div>
+                </br>
+            <!-- <span style="font-style: italic;"><a href="">Bulldog Democrat Privacy & Cybersecruity Policy</a></span> -->
+        </div>
+    </form>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+
+
+
+</body>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        var submitted = false;
+        var currentSet = 0;
+        var loadedSets = [];
+
+        var questionSets = [
+            // First Set
+            `
+            <tr>
+                <td colspan="2" class="inputFormTitle300">
+                    <b>Joining the College / Bulldog Democrats</b>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%;">
+                    First Name:<span style="color: red;">*</span><br>
+                    <input type="text" name="entry.1637702438" maxlength="30" class="inputFormInput" placeholder="First Name / Nickname">
+                </td>
+                <td style="width: 50%;">
+                    Last Name:<span style="color: red;">*</span><br>
+                    <input type="text" name="entry.463950814" maxlength="30" class="inputFormInput" placeholder="Last Name / Last Initial.">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Status:<span style="color: red;">*</span><br>
+                    <select name="entry.299159923" class="inputFormInput">
+                        <option value="Cadet">Cadet</option>
+                        <option value="Day Student">Day Student</option>
+                        <option value="Veteran Student">Veteran Student</option>
+                        <option value="Graduate Student">Graduate Student</option>
+                        <option value="Citadel Alumni">Citadel Alumni</option>
+                        <option value="Citadel Faculty">Citadel Faculty</option>
+                        <option value="Non Alumni Citadel Faculty">Non Alumni Citadel Faculty</option>
+                        <option value="Allied Student">Allied Student (CDSC, CofC, ...)</option>
+                        <option value="Friend Of The Club">Other - Friend Of The Club</option>
+                    </select>
+                </td>
+
+                <td>
+                    Class Of:<br>
+                    <input type="text" name="entry.625176574" maxlength="30" class="inputFormInput" placeholder="Class of ...">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Home Company:<br>
+                    <select name="entry.1551837163" class="inputFormInput">
+                        <option value="-">-</option>
+                        <option value="A">Alpha</option>
+                        <option value="B">Bravo</option>
+                        <option value="C">Charlie</option>
+                        <option value="D">Delta</option>
+                        <option value="BD">Band</option>                    
+                        <option value="E">Echo</option>
+                        <option value="F">Foxtrot</option>
+                        <option value="G">Golf</option>
+                        <option value="H">Hotel</option>
+                        <option value="I">India</option>
+                        <option value="K">Kilo</option>
+                        <option value="L">Lima</option>
+                        <option value="M">Mike</option>
+                        <option value="N">November</option>
+                        <option value="O">Oscar</option>
+                        <option value="P">Papa</option>
+                        <option value="R">Romeo</option>
+                        <option value="S">Sierra</option>
+                        <option value="T">Tango</option>
+                        <option value="V">Victor</option>
+                        <option value="PB">Palmetto Battery</option>
+                        <option value="RS">Regimental Staff</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Membership Type:<br>
+                    <select name="entry.1730606186" class="inputFormInput">
+                        <option value="College Democrat At The Citadel">College Democrat at The Citadel</option>
+                        <option value="Bulldog Democrat">Bulldog Democrat (Free Membership)</option>
+                        <option value="Bulldog Democrat Annual Voting Member">Bulldog Democrat (Dues-Paying Member - $25 Annually - Subscribe At ActBlue)</option>
+                        <option value="Non Citadel Friend Of The Club">Friend Of The Club</option>
+                        <option value="Could I Talk To A Representative">Could I Talk To A Representative?</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email Address:<span style="color: red;">*</span><br>
+                    <input type="text" name="entry.1763398493" maxlength="30" class="inputFormInput" placeholder="Email Address">
+                </td>
+                <td>
+                    Phone Number:<span style="color: red;">*</span><br>
+                    <input type="text" name="entry.1512794782" maxlength="30" class="inputFormInput" placeholder="+1 (XXX) XXX-XXXX">
+                </td>
+            </tr>
+            `,
+            // Second Set
+            `
+            <tr>
+                <td colspan="2" class="inputFormTitle300">
+                    <b>Joining the College / Bulldog Democrats</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    How Did You Hear About The College / Bulldog Democrats?:<span style="color: red;">*</span><br>
+                    <select name="entry.1272918841" class="inputFormInput">
+                        <option value="Other">Other</option>
+                        <option value="Social Media">Social Media</option>
+                        <option value="Public Meeting">Public Meeting</option>
+                        <option value="Internet Search">Internet Search</option>
+                        <option value="Poster / Sticker / Flag">Poster / Sticker / Flag</option>                    
+                        <option value="Rally / Parade / Protest">Rally / Parade / Protest</option>
+                        <option value="Club Representative">Club Representative</option>
+                        <option value="Tabling / Outreach Activity">Tabling / Outreach Activity</option>
+                        <option value="Word of Mouth">Word of Mouth (Friend, Coworker, ...)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Why Are You Interested In The College / Bulldog Democrats?:<span style="color: red;">*</span><br>
+                    <textarea name="entry.782249561" id="whydoyouwanttojoin" class="inputFormInput" style="resize: vertical;" rows="3" placeholder="Type your response here..."></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Anything You Would Like Us To Know?:<span style="color: red;">*</span><br>
+                    <textarea name="entry.332458685" id="anythingyouwouldlikeustoknow" class="inputFormInput" style="resize: vertical;" rows="4" placeholder="Ex. Are you a member of any other clubs or societies? Are you a business owner or a member of a union? Do you have prior military experience? Any technical skills? Any previous experience with serving in political office or organizing?"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Would You Like To Receive the College / Bulldog Democrats' Newsletter?:<span style="color: red;">*</span><br>
+                    <select name="entry.1649339841" class="inputFormInput">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="No Emails At All">No Emails At All</option>
+                    </select>
+                </td>
+            </tr>
+            `,
+            // Third Set
+            `
+            <tr>
+                <td colspan="2" class="inputFormTitle300">
+                    <b>Joining the College / Bulldog Democrats</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Address:<span style="color: red;">*</span><br>
+                    <input type="text" name="entry.181733459" maxlength="50" class="inputFormInput">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    City:<span style="color: red;">*</span><br>
+                    <input type="text" name="entry.439648336" maxlength="50" class="inputFormInput">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Zip Code:<span style="color: red;">*</span><br>
+                    <input type="text" name="entry.1196128769" maxlength="30" class="inputFormInput">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    State (Abbreviated):<br>
+                    <input type="text" name="entry.6294309" maxlength="2" class="inputFormInput">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Country:<span style="color: red;">*</span><br>
+                    <input type="text" name="entry.1231560757" maxlength="50" class="inputFormInput">
+                </td>
+            </tr>
+            `
+        ];
+
+        function updateForm() {
+            // Inject the set if not already added
+            if (!loadedSets.includes(currentSet)) {
+                const wrappedHtml = `<tbody class="formStep" id="formStep${currentSet}">${questionSets[currentSet]}</tbody>`;
+                $("#formContent").append(wrappedHtml);
+                loadedSets.push(currentSet);
+            }
+
+            // Hide all sets
+            $(".formStep").hide();
+
+            // Show current set
+            $(`#formStep${currentSet}`).show();
+
+            // Toggle nav buttons
+            $("#backBtn").toggle(currentSet > 0);
+            $("#nextBtn").toggle(currentSet < questionSets.length - 1);
+            $("#submitBtn").toggle(currentSet === questionSets.length - 1);
+        }
+
+        function nextForm() {
+            if (currentSet < questionSets.length - 1) {
+                currentSet++;
+                updateForm();
+            }
+        }
+
+        function prevForm() {
+            if (currentSet > 0) {
+                currentSet--;
+                updateForm();
+            }
+        }
+
+        $(document).ready(function () {
+            updateForm(); // Show first step
+        });
+    </script>
+
+
+<script src="jquery-3.7.1.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+    $('#gform').on('submit', function(e) {
+    $('#gform *').fadeOut(1000);
+    $('#gform').prepend(
+     '<span class="inputFormThanks" style="margin: 0% 10% 0% 0%;"><div>Thank You! A Representative Will Be In Contact With You Shortly.</div></span>'
+    );});
+</script>
+
+
+</html>
