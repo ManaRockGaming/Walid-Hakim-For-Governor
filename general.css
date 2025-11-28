@@ -212,8 +212,8 @@
 		.inputFormButton {background-color: white; color: black; font-size: 1vw; font-family: FuturaDisplay; border: 0.3vw solid black; padding: 0.8vw 1.3vw; border-radius: 0px; cursor: pointer; display: none;}
 		.inputFormButton:hover { background-color: #19421A; color: white;}
 
-		.inputFormThanks {margin: 0% 10% 0% 10%; border: none; padding: 0px; font-family: FuturaDisplay; text-align: center; font-size: 2.5vw; font-style: italic;}
-		.inputFormThanks div {width: 100%;}
+		.inputFormThanks {margin: 0% 10% 0% 10%; border: none; padding: 0% 1%; font-family: FuturaDisplay; text-align: center; font-size: 2.5vw; font-style: italic; color: white;}
+		.inputFormThanks div {width: 50%; margin: 1.5% 0%;}
 /*#endregion INPUT FORM SECTION*/
 
 /*#region FOOTER*/
