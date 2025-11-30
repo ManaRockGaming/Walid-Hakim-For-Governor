@@ -74,8 +74,20 @@
       flex-direction: column; /* stack vertically on smaller screens */
       text-align: center;}
 
+    .websiteTitleLeft,
+    .websiteTitleRight { 
+      justify-content: center;
+      width: 100%;
+      }
+    
     .websiteTitleRight {
-      text-align: center;}
+      text-align: center;
+      padding-right: 0;
+      }
+
+    .websiteTitleLeft {
+      margin-left: 0;
+      }
 
     .websiteTitleLeft img {
       width: 25%;}
