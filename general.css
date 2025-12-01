@@ -97,6 +97,25 @@
 
     .websiteTitleRight h3 {
       font-size: 1rem;}
+
+
+
+      
+      .websiteTitleRight {
+    display: none !important;
+  }
+
+  /* Center the left side */
+  .websiteTitleLeft {
+    justify-content: center !important;
+    text-align: center;
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .websiteTitleLeft span {
+    margin-left: 0 !important; /* remove the 50px left margin */
+  }
   }
 
   @media (max-width: 480px) {
@@ -175,7 +194,21 @@
 		
 		/* MEDIA QUERIES FOR NAVIGATION */
 		@media screen and (max-width: 768px) {
-			.mobile-Br { display: none; }
+			.topNavigation {
+        justify-content: center;   /* centers items horizontally */
+      }
+
+      .topNavigationLeft {
+        padding-left: 0;           /* remove left padding on small screens */
+        text-align: center;
+      }
+
+      .topNavigationLeft .dropDown {
+        display: inline-block;     /* keeps links in a row */
+        margin: 0 5px;
+      }
+      
+      .mobile-Br { display: none; }
 			.topNavigation a { padding: 0.75em 1vw; font-size: clamp(12px, 2.5vw, 16px); }
 			.dropDownContent { min-width: 100%; }
     }
