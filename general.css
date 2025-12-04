@@ -221,9 +221,9 @@
 	/*#region ABOUT SECTION*/
 		.aboutSection {background-color: #194867; color: white;}
 			.aboutSectionDiv {vertical-align: top; margin: 0% 10%; padding: 2% 0%; }
-			.aboutSectionLeft { padding: 0px 20px; vertical-align: top;}
+			.aboutSectionLeft { padding: 0px 2%; vertical-align: top;}
 			.aboutSectionLeftTitle {font-family: Jerome; font-size: 5vw; text-align: center; margin: 0; padding: 0; line-height: 1;}
-			.aboutSectionRight {padding: 0px 20px; width: 40%; vertical-align: top;}
+			.aboutSectionRight {padding: 0px 2%; width: 40%; vertical-align: top;}
 			.aboutSectionRightTitle {font-family: Jerome; font-size: 5vw; text-align: center; margin: 0; padding: 0; line-height: 1;}
 	/*#endregion ABOUT SECTION*/
 

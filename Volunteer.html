@@ -92,15 +92,23 @@
 <!-- MAIN CONTENT -->
 <article>
     
-    <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('Picture_Of_Hakim_In_Suit_Black.png'); background-size: cover; background-repeat: no-repeat;">
+    <!-- <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('Picture_Of_Hakim_In_Suit_Black.png'); background-size: cover; background-repeat: no-repeat;"> -->
     <!-- NEWSLETTER SECTION-->  
+    <table style=" border-collapse: collapse; border-spacing: 0; width: 100%;">
+        <tr>
+            <td style="width: 50%; background-color: black;">
+
+    
+    
+    
+    
     <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSdm5d0eF3Y9k2Da6YGAr-pxvfoEF1-eOKmG8BBXve1fHzyfBA/formResponse" method="POST"  target="hidden_iframe" onsubmit="submitted=true;">        
         <div class="inputForm"> 
-            <table id="formContent">
+            <table id="formContent" style="width: 100%;">
                 <!-- Questions will be inserted here dynamically -->
             </table>
             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { nextForm(); }"></iframe>
-            <div id="navButtons" style="width: 50%;">
+            <div id="navButtons" style="width: 100%;">
                 </br>
                 <button type="button" class="inputFormButton" id="backBtn" onclick="prevForm()" style="display:none;">&lt;Join The Team</button>
                 <button type="button" class="inputFormButton" id="nextBtn" onclick="nextForm()">Join The Team</button>
@@ -239,7 +247,14 @@
             updateForm(); // Show first step
         });
     </script>
-    </div>
+        </td>
+        <td style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('Portrait.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+        </td>
+        </tr>
+        
+    </table>    
+    <!-- </div> -->
 
 
     
