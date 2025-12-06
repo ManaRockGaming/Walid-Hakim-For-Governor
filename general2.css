@@ -23,48 +23,55 @@
 	.p100vw {font-family: FuturaDisplay; margin: 0px; font-size: 0.75vw; font-weight: bold;}
 
 /*#region WEBSITE TITLE*/
+
   .websiteTitle {
     background-color: #19421A;
     color: white;
+    width: 100%;
     font-family: FuturaDisplay;
-    display: flex;
-    justify-content: space-between; /* left + right alignment */
-    align-items: center;
-    
-    padding: 10px 20px;
-    overflow: hidden;}
+    padding: 10px 0px;
+    table-layout: fixed;}
 
-  .websiteTitleLeft {
+  .websiteTitle tr {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    align-items: center;}
+
+  .websiteTitleName {
+       
+    width: 72%;
+    margin: 0% 0% 0% 3%;
+    display: flex;
+    font-size: 5vw;
+    font-family: Jerome; font-size: 5vw;
     }
 
-  .websiteTitleRight {
+  .websiteTitleSocials {
+  
+    width: 28%;
+    margin: 0% 3% 0% 0%;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    gap: 0.8vw;
-    padding-right: 2vw;
+    gap: 0.2vw;
     position: relative;
-    top: 0px; /* 🔹 move down (use negative to move up) */}
+    font-size: 1.5vw;}
 
-  .websiteTitleRight a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;}
+    .websiteTitleSocials img {
+      width: 4.0vw;
+      height: auto;}
 
-  .websiteTitleRight img {
-    width: 6vw;
-    max-width: 66px;
-    height: auto;}
+    .websiteTitleSocials img:hover {
+      transform: scale(1.1);}
 
-  .websiteTitleRight img:hover {
-    transform: scale(1.1);}
 
-  .websiteTitleRight h1 {
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: normal;}
+
+
+
+
+
+
 
   /* MEDIA QUERIES FOR WEBSITE TITLE */
   
